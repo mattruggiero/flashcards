@@ -431,7 +431,9 @@ export const shuffle = () => {
     }
 }
 
-export const start = () => {return myData[0]}
+export const start = () => {
+    shuffle();
+    return myData[0]}
 export const numQuestions = () => {return myData.length}
 
 
