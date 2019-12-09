@@ -2,8 +2,13 @@
   "name": "flashcards",
   "version": "0.1.0",
   "private": true,
+  "engines":{
+    "npm":"6.10.3",
+    "node":"12.8.0"
+  },
   "dependencies": {
     "react": "^16.12.0",
+    "react-bootstrap": "^1.0.0-beta.16",
     "react-dom": "^16.12.0",
     "react-scripts": "3.2.0"
   },
