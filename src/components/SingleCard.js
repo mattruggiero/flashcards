@@ -2,10 +2,8 @@ import React, { Component } from 'react';
 import Card from 'react-bootstrap/Card';
 import Button from 'react-bootstrap/Button';
 import { pickQuestion } from '../data/Quiz';
-import { shuffle } from '../data/Quiz';
 import { start } from '../data/Quiz';
-import { Container } from 'react-bootstrap';
-import { Col, Row } from 'react-bootstrap';
+import { Container, Col, Row } from 'react-bootstrap';
 
 //TODO
 //add questions with images
@@ -38,7 +36,7 @@ class SingleCard extends Component {
 
     render(){
         const cardStyle = {
-            width:"25em",
+            width:"100%",
             minHeight:'500px',
             padding:'10px',
             textAlign:'center',
@@ -50,6 +48,8 @@ class SingleCard extends Component {
         const displayed = this.state.showAnswer ? this.state.currentQuestion.A : this.state.currentQuestion.Q;
         return(
             <div className="wrapper">
+                <Container>
+                <Row>
                 <Card style={cardStyle}>
                     <Card.Header>{cardTitle}</Card.Header>
                     <Card.Body>
@@ -62,14 +62,16 @@ class SingleCard extends Component {
                 <Button variant="primary" onClick={() => this.toggleAnswer()}>{buttonText}</Button>
                 </Col>
                 <Col>
-                <Button variant="primary" onClick={()=>this.getQuestion()}>New Question </Button>
+                
                 </Col>
                 <Col>
-                <Button variant="secondary" onClick = {shuffle()}>Shuffle Questions</Button>
+                <Button variant="primary" onClick={()=>this.getQuestion()}>New Question </Button>
                 </Col>
                 </Row>
                 </Container>
                 </Card>
+                </Row>
+                </Container>
             </div>
         )
     }

@@ -16,5 +16,6 @@ code {
 .wrapper{
   margin:auto;
   padding:30px;
+  white-space: pre-wrap;
   
 }
