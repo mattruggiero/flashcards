@@ -43,7 +43,7 @@ class SingleCard extends Component {
             borderRadius:'15px',
             boxShadow:'10px 10px 10px black'
         }
-        const buttonText = this.state.showAnswer ? "Show Question":"Show Answer";
+        const questionOrAnswer = this.state.showAnswer ? "Question":"Answer";
         const cardTitle = this.state.showAnswer ? "ANSWER":"QUESTION";
         const displayed = this.state.showAnswer ? this.state.currentQuestion.A : this.state.currentQuestion.Q;
         return(
@@ -59,13 +59,13 @@ class SingleCard extends Component {
                 <Container>
                 <Row>
                 <Col>
-                <Button variant="primary" onClick={() => this.toggleAnswer()}>{buttonText}</Button>
+                <Button size='sm' variant="primary" onClick={() => this.toggleAnswer()}>{questionOrAnswer}</Button>
                 </Col>
                 <Col>
                 
                 </Col>
                 <Col>
-                <Button variant="primary" onClick={()=>this.getQuestion()}>New Question </Button>
+                <Button size='sm'  variant="primary" onClick={()=>this.getQuestion()}>Next</Button>
                 </Col>
                 </Row>
                 </Container>
