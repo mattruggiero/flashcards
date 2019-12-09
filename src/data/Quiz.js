@@ -413,16 +413,7 @@ const myData = [
 
 //TODO
 //need questins with pictures from quizzes 
-//need questions from midterm 
 
-// should seperate function from data
-
-
-// export const pickQuestion = () =>{
-//     let index = Math.floor(Math.random() * (0 - myData.length +1));
-//     index = index < 0 ? index*-1 : index;
-//     return myData[index];
-// }
 
 export const pickQuestion = (index) => {
     return myData[index%myData.length];

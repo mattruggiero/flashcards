@@ -4,16 +4,11 @@ import Button from 'react-bootstrap/Button';
 import { pickQuestion } from '../data/Quiz';
 import { shuffle } from '../data/Quiz';
 import { start } from '../data/Quiz';
-//import { numQuestions } from '../data/Quiz';
 import { Container } from 'react-bootstrap';
 import { Col, Row } from 'react-bootstrap';
 
 //TODO
-//fix card number
-//put on git hub 
-//deploy on heroku 
 //add questions with images
-//add midterm questions 
 
 class SingleCard extends Component {
     constructor(props){
@@ -38,7 +33,6 @@ class SingleCard extends Component {
             showAnswer:false,
             currentIndex: this.state.currentIndex +1 
         }))
-        console.log(this.state.currentQuestion);
     }
 
 
